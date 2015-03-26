@@ -4,16 +4,24 @@ MATLAB 80 channel oscilloscope GUI using National Instruments digitizers
 BigMeasure
 
 Purpose
-BigMeasure records up to 80 channels of digitizer data. It is a GUI written in MATLAB. It functions much like an oscilloscope with various kinds of triggers. It is meant to be operated with different external digitizers from National Instruments, although it can work with others supported by the MATLAB Data Acquisition Toolbox. Several digitizers can be setup to operate simultaneously controlled from one computer running BigMeasure. For more info on how to wire the digitizers see BigMeasure Trigger Configurations.pptx.
+BigMeasure is a GUI written in MATLAB.that records up to 80 channels of digitizer data. It functions much like an oscilloscope with various kinds of triggers. It is meant to be operated with different external digitizers from National Instruments, although it can work with others supported by the MATLAB Data Acquisition Toolbox. Several digitizers can be setup to operate simultaneously controlled from one computer running BigMeasure. For more info on how to wire the digitizers see BigMeasure Trigger Configurations.pptx.
 
-It can save data in .mat format and reload the data for easy viewing. The user can save names for each channel (such as “Mic 8” or “Top Detector”) which get saved in the output. This make further analysis and plotting easy when the .mat file is imported.
+It can save data in .mat format and reload the data for easy viewing. The user can save friendly names for each channel (such as “Mic 8” or “Top Detector”) which are stored in the output data file. This make further analysis and plotting easy when the .mat file is imported.
 
 Another convenient feature is configuration saving and recalling. You can save all settings such as channel names, voltage scales, and trigger settings. With 80 channels this is a big time savings.
+
+
+Signal generating capabilities
+
+BigMeasure can also create output signals when operated with digitizers that are so capable. By clicking on WaveGen a window appears that enables creating output waveforms. This can be very useful for debugging.
+
+Interestingly, MATLAB has the capability to have WaveGen running AND take digitzed data at the same time with one digitizer and one computer.
 
 
 How to run it
 
 First of all you need a working copy of MATLAB along with the Data Acquisition Toolbox. If you have that, then you start MATLAB and simply navigate to a directory with all of the files and launch the script BigMeasure.m. This will display the BigMeasure GUI and you are off and running.
+
 If there is no digitizer attached, BigMeasure automatically enters into a mode where it creates its own random data. Since this looks realistic, I added FAKE DATA in red letters so there is no confusion. The fake data mode is a good way to begin and use the interface.
 
 
